@@ -1,0 +1,23 @@
+defaults: &defaults
+  host: localhost
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019
+
+development:
+  <<: *defaults
+  database: weminds_development
+
+test:
+  <<: *defaults
+  database: weminds_test
+
+# set these environment variables on your prod server
+production:
+  host: localhost
+  #port: <%= ENV['MONGOID_PORT'] %>
+  #username: <%= ENV['MONGOID_USERNAME'] %>
+  #password: <%= ENV['MONGOID_PASSWORD'] %>
+  database: weminds_production
