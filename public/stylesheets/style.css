@@ -634,7 +634,14 @@ input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 53, ../../app/stylesheets/partials/_page.scss */
+/* line 51, ../../app/stylesheets/partials/_page.scss */
+h1 {
+  font-size: 28px;
+  text-align: center;
+  font-family: Verdana;
+}
+
+/* line 59, ../../app/stylesheets/partials/_page.scss */
 header {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #4a4949));
   background-image: -webkit-linear-gradient(top, #333333, #4a4949);
@@ -646,7 +653,7 @@ header {
   color: #fff;
 }
 
-/* line 60, ../../app/stylesheets/partials/_page.scss */
+/* line 66, ../../app/stylesheets/partials/_page.scss */
 #main {
   background: url(/images/noize.png);
   position: absolute;
@@ -656,7 +663,7 @@ header {
   right: 0;
 }
 
-/* line 65, ../../app/stylesheets/partials/_page.scss */
+/* line 71, ../../app/stylesheets/partials/_page.scss */
 footer {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4a4949), color-stop(100%, #333333));
   background-image: -webkit-linear-gradient(top, #4a4949, #333333);
@@ -668,12 +675,12 @@ footer {
 }
 
 /* Styles for the entire LavaLamp menu */
-/* line 73, ../../app/stylesheets/partials/_page.scss */
+/* line 79, ../../app/stylesheets/partials/_page.scss */
 #logo {
   float: left;
 }
 
-/* line 77, ../../app/stylesheets/partials/_page.scss */
+/* line 83, ../../app/stylesheets/partials/_page.scss */
 #search_bar input {
   width: 230px;
   height: 20px;
@@ -689,7 +696,7 @@ footer {
   border-radius: 7px;
 }
 
-/* line 90, ../../app/stylesheets/partials/_page.scss */
+/* line 96, ../../app/stylesheets/partials/_page.scss */
 #search_bar {
   margin: 7px 0 0 0;
   float: right;
@@ -697,7 +704,7 @@ footer {
   height: 36px;
 }
 
-/* line 98, ../../app/stylesheets/partials/_page.scss */
+/* line 104, ../../app/stylesheets/partials/_page.scss */
 .lavalamp {
   position: relative;
   width: 550px;
@@ -709,37 +716,37 @@ footer {
 }
 
 /* Force the list to flow horizontally */
-/* line 108, ../../app/stylesheets/partials/_page.scss */
+/* line 114, ../../app/stylesheets/partials/_page.scss */
 .lavalamp li {
   float: left;
   list-style: none;
 }
 
 /* Represents the background of the highlighted menu-item. */
-/* line 113, ../../app/stylesheets/partials/_page.scss */
+/* line 119, ../../app/stylesheets/partials/_page.scss */
 .lavalamp li.back {
-  width: 9px;
   height: 30px;
   z-index: 8;
   position: absolute;
+  border-bottom: 5px solid #b8da3e;
 }
 
-/* line 119, ../../app/stylesheets/partials/_page.scss */
+/* line 126, ../../app/stylesheets/partials/_page.scss */
 .lavalamp li.back .left {
   height: 30px;
   margin-right: 9px;
-  border-bottom: 5px solid #b8da3e;
   z-index: 8;
   position: absolute;
 }
 
 /* Styles for each menu-item. */
-/* line 127, ../../app/stylesheets/partials/_page.scss */
+/* line 134, ../../app/stylesheets/partials/_page.scss */
 .lavalamp li a {
   position: relative;
   overflow: hidden;
   text-decoration: none;
-  font: bold 13px helvetica;
+  text-transform: uppercase;
+  font: bold 12px helvetica;
   color: #ccc;
   outline: none;
   text-align: center;
@@ -750,6 +757,64 @@ footer {
   float: left;
   display: block;
   margin: auto 10px;
+}
+
+/* line 151, ../../app/stylesheets/partials/_page.scss */
+#content {
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+  box-align: stretch;
+  -moz-box-direction: reverse;
+  -webkit-box-direction: reverse;
+  box-direction: reverse;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 160, ../../app/stylesheets/partials/_page.scss */
+#slider, #sign_up {
+  padding: 20px;
+}
+
+/* line 165, ../../app/stylesheets/partials/_page.scss */
+#sign_up {
+  margin: 20px 20px 20px 20px;
+  width: 250px;
+  background-color: #c5c1b4;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -o-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+}
+
+/* line 174, ../../app/stylesheets/partials/_page.scss */
+#slider {
+  -moz-box-flex: 4;
+  -webkit-box-flex: 4;
+  box-flex: 4;
+  background-color: #375f99;
+  margin: 20px 20px 20px 0;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -o-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+}
+
+/* line 182, ../../app/stylesheets/partials/_page.scss */
+.login_btn {
+  padding: 5px 0 5px 0;
 }
 
 @media print {

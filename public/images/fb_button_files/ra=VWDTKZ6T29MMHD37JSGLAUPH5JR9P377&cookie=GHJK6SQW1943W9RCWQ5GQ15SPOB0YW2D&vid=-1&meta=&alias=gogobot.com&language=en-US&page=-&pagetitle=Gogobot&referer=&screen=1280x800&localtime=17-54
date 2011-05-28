@@ -1,0 +1,3 @@
+//:gogobot.com
+setTimeout(function(){woopraTracker.ping();},12 * 1000);
+woopraTracker.createcookie('wooMeta','MTM2MjYwJjEmMCYxJjEzMDY1OTgwNDM4MzQmMTMwNjU5ODA0MzgzNCYmMTAwJiY1MDAxNDgmJiYm',9000);

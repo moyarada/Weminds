@@ -1,0 +1,3 @@
+try{woopraTracker.vid(136260);}catch(e){}
+setTimeout(function(){woopraTracker.ping();},12 * 1000);
+woopraTracker.createcookie('wooMeta','MTM2MjYwJjEmMSY0OTIyMSYxMzA2NTk4MDQzODM0JjEzMDY1OTgwOTMwNTQmJjEwMCYmNTAwMTQ4JiYmJg==',9000);

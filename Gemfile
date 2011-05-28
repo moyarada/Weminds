@@ -15,7 +15,10 @@ gem 'mongo_ext'
 # Facebook 
 gem 'fbgraph'
 gem 'linkedin'
-gem 'twitter'
+gem 'twitter_oauth'
+gem 'sinatra'
+gem 'oauth'
+gem 'json'
 
 # Deploy with Capistrano
 gem 'capistrano'

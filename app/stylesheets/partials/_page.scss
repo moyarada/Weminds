@@ -47,6 +47,12 @@ input:invalid, textarea:invalid {
 //-----------------------------------
 
 body {}
+    
+h1 {
+    font-size:28px;
+    text-align: center;
+    font-family: Verdana;
+}
 
 #container {}
 
@@ -111,24 +117,25 @@ footer {
     }
         /* Represents the background of the highlighted menu-item. */
         .lavalamp li.back {
-            width: 9px; 
+            //width: 20px; 
             height: 30px;
             z-index: 8;
             position: absolute;
+            border-bottom: 5px solid #b8da3e;
         }
             .lavalamp li.back .left {
                 height: 30px;
                 margin-right: 9px;
-                border-bottom: 5px solid #b8da3e;
+                //border-bottom: 5px solid #b8da3e;
                 z-index: 8;
-                                        position: absolute;
+                position: absolute;
             }
         /* Styles for each menu-item. */
         .lavalamp li a {
             position: relative; overflow: hidden;
             text-decoration: none;
-            //text-transform: uppercase;
-            font: bold 13px helvetica;
+            text-transform: uppercase;
+            font: bold 12px helvetica;
             color: #ccc; 
             outline: none;
             text-align: center;
@@ -140,3 +147,38 @@ footer {
             margin: auto 10px;
         }
        
+
+#content {
+    @include display-box;
+      @include box-orient(horizontal);
+      @include box-align(stretch);
+      @include box-direction(reverse);
+      height: 100%;
+      width: 100%;
+}
+
+#slider, #sign_up {
+    padding: 20px; 
+
+}
+
+#sign_up {
+    //@include box-flex(1);
+    margin: 20px 20px 20px 20px;
+    width: 250px;
+    background-color: #c5c1b4;
+    @include single-box-shadow;
+    @include opacity(0.9);
+}
+
+#slider {
+    @include box-flex(4);
+    background-color: #375f99;
+    margin: 20px 20px 20px 0;
+    @include single-box-shadow;
+    @include opacity(0.9);
+}
+
+.login_btn {
+    padding: 5px 0 5px 0;
+}

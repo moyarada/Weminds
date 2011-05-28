@@ -52,8 +52,6 @@ GEM
       addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
       rack (< 2, >= 1.1.0)
-    faraday_middleware (0.6.3)
-      faraday (~> 0.6.0)
     fbgraph (1.8.0)
       activesupport
       activesupport
@@ -99,7 +97,6 @@ GEM
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
     multi_json (1.0.3)
-    multi_xml (0.2.2)
     multipart-post (1.1.1)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
@@ -133,8 +130,6 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
-    rash (0.3.0)
-      hashie (~> 1.0.0)
     rest-client (1.6.1)
       mime-types (>= 1.16)
     ruby-debug (0.10.4)
@@ -143,18 +138,17 @@ GEM
     ruby-debug-base (0.10.4)
       linecache (>= 0.3)
     sass (3.1.1)
-    simple_oauth (0.1.5)
+    sinatra (1.2.6)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
     thor (0.14.6)
+    tilt (1.3.2)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    twitter (1.4.1)
-      faraday (~> 0.6.1)
-      faraday_middleware (~> 0.6.3)
-      hashie (~> 1.0.0)
-      multi_json (~> 1.0.0)
-      multi_xml (~> 0.2.0)
-      rash (~> 0.3.0)
-      simple_oauth (~> 0.1.4)
+    twitter_oauth (0.4.3)
+      json (>= 1.1.9)
+      mime-types (>= 1.16)
+      oauth (>= 0.4.1)
     typhoeus (0.2.4)
       mime-types
       mime-types
@@ -174,10 +168,13 @@ DEPENDENCIES
   haml
   html5-boilerplate
   jquery-rails (>= 0.2.6)
+  json
   linkedin
   mongo
   mongo_ext
   mongoid (>= 2.0)
+  oauth
   rails (= 3.0.7)
   ruby-debug
-  twitter
+  sinatra
+  twitter_oauth
