@@ -7,8 +7,9 @@ class FbAuthController < ApplicationController
   end
   
   def start
+    url = "http://#{request.host}:#{request.port}/fb_auth/callback"
     redirect_to client.authorization.authorize_url(
-      :redirect_uri => 'http://localhost:3000/fb_auth/callback' , 
+      :redirect_uri => url , 
       :scope => 'email,user_photos,friends_photos,publish_stream,offline_access')
   end
   

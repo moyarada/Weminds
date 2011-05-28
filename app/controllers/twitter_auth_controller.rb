@@ -16,7 +16,11 @@ class TwitterAuthController < ApplicationController
                                  	:authorize_path => '/oauth/authorize' })
 
     # Ask for a token to make a request
-    url = "http://localhost:3000/twitter_auth/callback"
+    if (request.port == 80)
+      url = "http://#{request.host}/twitter_auth/callback"
+    else
+      url = "http://#{request.host}:#{request.port}/twitter_auth/callback"
+    end  
     request_token = @oauth.get_request_token(:oauth_callback => url)
     
     # Take a note of the token and the secret. You'll need these later
