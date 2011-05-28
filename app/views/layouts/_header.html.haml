@@ -4,10 +4,14 @@
   %li
     %a{'href' => '#'} Home
   %li
-    %a{'href' => '#'} Blog
+    %a{'href' => '#'} QFeed
   %li    
     %a{'href' => '#'} About
-  %li    
-    %a{'href' => '#'} Profile
+
+#user_menu
+  %a{'href' => '/dashboard/profile'} Profile
+  %a{'href' => '/dashboard/services'} Services
+  %a{'href' => '/dashboard/logout'} Logout
+  
 #search_bar
   %input{'type' => 'text'}

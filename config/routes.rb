@@ -1,27 +1,34 @@
 Weminds::Application.routes.draw do
   
-  get "twitter_auth/index"
-
-  get "twitter_auth/start"
-
-  get "twitter_auth/callback"
-
-  get "twitter_auth/oclient"
-
-  get "linked_auth/index"
-
-  get "linked_auth/start"
-
-  get "linked_auth/callback"
-
-  get "linked_auth/oclient"
+  resources :dashboard, :controller => 'dashboard' do 
+       collection do
+         get :index
+         get :show
+         get :logout
+       end
+   end
+   
+   resources :linked_auth, :controller => 'linked_auth' do 
+        collection do
+          get :start
+          get :callback
+        end
+   end
 
   resources :fb_auth, :controller => 'fb_auth' do 
       collection do
         get :start
         get :callback
       end
-    end
+  end
+  
+  resources :twitter_auth, :controller => 'twitter_auth' do 
+      collection do
+        get :start
+        get :callback
+      end
+  end
+  
 
   root :to => "front_page#index"
 

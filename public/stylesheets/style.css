@@ -697,6 +697,19 @@ footer {
 }
 
 /* line 96, ../../app/stylesheets/partials/_page.scss */
+#user_menu {
+  margin: 0px 0 0 0;
+  float: left;
+  width: 150px;
+  text-align: right;
+}
+
+/* line 103, ../../app/stylesheets/partials/_page.scss */
+#user_menu a {
+  margin: 4px;
+}
+
+/* line 107, ../../app/stylesheets/partials/_page.scss */
 #search_bar {
   margin: 7px 0 0 0;
   float: right;
@@ -704,7 +717,7 @@ footer {
   height: 36px;
 }
 
-/* line 104, ../../app/stylesheets/partials/_page.scss */
+/* line 115, ../../app/stylesheets/partials/_page.scss */
 .lavalamp {
   position: relative;
   width: 550px;
@@ -716,14 +729,14 @@ footer {
 }
 
 /* Force the list to flow horizontally */
-/* line 114, ../../app/stylesheets/partials/_page.scss */
+/* line 125, ../../app/stylesheets/partials/_page.scss */
 .lavalamp li {
   float: left;
   list-style: none;
 }
 
 /* Represents the background of the highlighted menu-item. */
-/* line 119, ../../app/stylesheets/partials/_page.scss */
+/* line 130, ../../app/stylesheets/partials/_page.scss */
 .lavalamp li.back {
   height: 30px;
   z-index: 8;
@@ -731,7 +744,7 @@ footer {
   border-bottom: 5px solid #b8da3e;
 }
 
-/* line 126, ../../app/stylesheets/partials/_page.scss */
+/* line 137, ../../app/stylesheets/partials/_page.scss */
 .lavalamp li.back .left {
   height: 30px;
   margin-right: 9px;
@@ -740,7 +753,7 @@ footer {
 }
 
 /* Styles for each menu-item. */
-/* line 134, ../../app/stylesheets/partials/_page.scss */
+/* line 145, ../../app/stylesheets/partials/_page.scss */
 .lavalamp li a {
   position: relative;
   overflow: hidden;
@@ -759,7 +772,7 @@ footer {
   margin: auto 10px;
 }
 
-/* line 151, ../../app/stylesheets/partials/_page.scss */
+/* line 162, ../../app/stylesheets/partials/_page.scss */
 #content {
   display: -moz-box;
   display: -webkit-box;
@@ -777,12 +790,12 @@ footer {
   width: 100%;
 }
 
-/* line 160, ../../app/stylesheets/partials/_page.scss */
+/* line 171, ../../app/stylesheets/partials/_page.scss */
 #slider, #sign_up {
   padding: 20px;
 }
 
-/* line 165, ../../app/stylesheets/partials/_page.scss */
+/* line 176, ../../app/stylesheets/partials/_page.scss */
 #sign_up {
   margin: 20px 20px 20px 20px;
   width: 250px;
@@ -796,7 +809,7 @@ footer {
   opacity: 0.9;
 }
 
-/* line 174, ../../app/stylesheets/partials/_page.scss */
+/* line 185, ../../app/stylesheets/partials/_page.scss */
 #slider {
   -moz-box-flex: 4;
   -webkit-box-flex: 4;
@@ -812,7 +825,7 @@ footer {
   opacity: 0.9;
 }
 
-/* line 182, ../../app/stylesheets/partials/_page.scss */
+/* line 193, ../../app/stylesheets/partials/_page.scss */
 .login_btn {
   padding: 5px 0 5px 0;
 }

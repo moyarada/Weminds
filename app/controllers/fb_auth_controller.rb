@@ -26,7 +26,7 @@ class FbAuthController < ApplicationController
     request = Net::HTTP::Get.new(uri.request_uri)
     response = http.request(request).body
     uri_params = Hash[*response.split("&").map {|part| part.split("=") }.flatten]
-    session[:access_token] = uri_params['access_token']
+    session[:fb_access_token] = uri_params['access_token']
     user_json = client.selection.me.info!.data
     
     #user = User.create({:name => user_json.name, :email => user_json.email, :access_token => session[:access_token]})

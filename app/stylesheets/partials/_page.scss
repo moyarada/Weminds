@@ -93,6 +93,17 @@ footer {
     @include border_radius(7px);
 }
 
+#user_menu {
+    margin: 0px 0 0 0;
+    float:left;
+    width: 150px;
+    text-align: right;
+}
+
+#user_menu a {
+    margin: 4px;
+}
+
 #search_bar {
     margin: 7px 0 0 0;
     float:right;
@@ -182,3 +193,4 @@ footer {
 .login_btn {
     padding: 5px 0 5px 0;
 }
+
