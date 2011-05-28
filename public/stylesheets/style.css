@@ -83,15 +83,15 @@ input, select {
 
 /* line 11, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_fonts.scss */
 body {
-  font-size: 13px;
-  font-family: sans-serif;
+  font-size: 12px;
+  font-family: helvetica;
   line-height: 1.231;
   *font-size: small;
 }
 
 /* line 18, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_fonts.scss */
 select, input, textarea, button {
-  font: 99% sans-serif;
+  font: 99% helvetica;
 }
 
 /* line 22, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_fonts.scss */
@@ -278,9 +278,315 @@ nav ul, nav li {
   visibility: hidden;
 }
 
-/* line 8, ../../app/stylesheets/partials/_page.scss */
+/* line 10, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#container {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -50px;
+}
+/* line 18, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#container #root_footer {
+  height: 50px;
+}
+
+/* line 20, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#footer {
+  clear: both;
+  position: relative;
+  height: 50px;
+}
+
+/* line 14, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 24, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 28, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 31, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 33, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 35, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 37, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 39, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 41, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 43, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 45, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 11, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_fonts.scss */
+body {
+  font-size: 12px;
+  font-family: helvetica;
+  line-height: 1.231;
+  *font-size: small;
+}
+
+/* line 18, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_fonts.scss */
+select, input, textarea, button {
+  font: 99% helvetica;
+}
+
+/* line 22, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_fonts.scss */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* line 16, ../../app/stylesheets/partials/_overrides.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 18, ../../app/stylesheets/partials/_overrides.scss */
+ul, ol {
+  margin-left: 2em;
+}
+
+/* line 19, ../../app/stylesheets/partials/_overrides.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 21, ../../app/stylesheets/partials/_overrides.scss */
+td, td img {
+  vertical-align: top;
+}
+
+/* line 23, ../../app/stylesheets/partials/_overrides.scss */
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  bottom: -0.25em;
+}
+
+/* line 25, ../../app/stylesheets/partials/_overrides.scss */
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  top: -0.5em;
+}
+
+/* line 27, ../../app/stylesheets/partials/_overrides.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 57, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/* line 62, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+/* line 70, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 71, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+/* line 72, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+/* line 73, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/* line 78, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer;
+}
+
+/* line 85, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+button, input, select, textarea {
+  width: auto;
+  overflow: visible;
+  margin: 0;
+}
+
+/* line 89, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 100, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+::-moz-selection {
+  background: #ff5e99;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 101, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+::selection {
+  background: #ff5e99;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 106, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+a:link {
+  -webkit-tap-highlight-color: #ff5e99;
+}
+
+/* line 117, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 119, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+.ie6 legend, .ie7 legend {
+  margin-left: -7px;
+}
+
+/* line 124, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_styles.scss */
+nav ul, nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 53, ../../app/stylesheets/partials/_overrides.scss */
+.ir {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  direction: ltr;
+  background-repeat: no-repeat;
+}
+
+/* line 55, ../../app/stylesheets/partials/_overrides.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 57, ../../app/stylesheets/partials/_overrides.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 50, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_helpers.scss */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 59, ../../app/stylesheets/partials/_overrides.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 22, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 9, ../../app/stylesheets/partials/_page.scss */
 body, select, input, textarea {
   color: #444444;
+  font-family: helvetica;
 }
 
 /* line 15, ../../app/stylesheets/partials/_page.scss */
@@ -305,7 +611,7 @@ strong, th {
 
 /* line 28, ../../app/stylesheets/partials/_page.scss */
 small {
-  font-size: 85%;
+  font-size: 92%;
 }
 
 /* line 37, ../../app/stylesheets/partials/_page.scss */
@@ -326,6 +632,124 @@ input:invalid, textarea:invalid {
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid {
   background-color: #f0dddd;
+}
+
+/* line 53, ../../app/stylesheets/partials/_page.scss */
+header {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #333333), color-stop(100%, #4a4949));
+  background-image: -webkit-linear-gradient(top, #333333, #4a4949);
+  background-image: -moz-linear-gradient(top, #333333, #4a4949);
+  background-image: -o-linear-gradient(top, #333333, #4a4949);
+  background-image: linear-gradient(top, #333333, #4a4949);
+  height: 40px;
+  padding: 10px;
+  color: #fff;
+}
+
+/* line 60, ../../app/stylesheets/partials/_page.scss */
+#main {
+  background: url(/images/noize.png);
+  position: absolute;
+  top: 61px;
+  bottom: 51px;
+  left: 0;
+  right: 0;
+}
+
+/* line 65, ../../app/stylesheets/partials/_page.scss */
+footer {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4a4949), color-stop(100%, #333333));
+  background-image: -webkit-linear-gradient(top, #4a4949, #333333);
+  background-image: -moz-linear-gradient(top, #4a4949, #333333);
+  background-image: -o-linear-gradient(top, #4a4949, #333333);
+  background-image: linear-gradient(top, #4a4949, #333333);
+  color: #fff;
+  padding: 10px;
+}
+
+/* Styles for the entire LavaLamp menu */
+/* line 73, ../../app/stylesheets/partials/_page.scss */
+#logo {
+  float: left;
+}
+
+/* line 77, ../../app/stylesheets/partials/_page.scss */
+#search_bar input {
+  width: 230px;
+  height: 20px;
+  padding: 0 5px 0 5px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #4a4949;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+}
+
+/* line 90, ../../app/stylesheets/partials/_page.scss */
+#search_bar {
+  margin: 7px 0 0 0;
+  float: right;
+  width: 250px;
+  height: 36px;
+}
+
+/* line 98, ../../app/stylesheets/partials/_page.scss */
+.lavalamp {
+  position: relative;
+  width: 550px;
+  height: 29px;
+  padding: 5px;
+  margin: 0;
+  overflow: hidden;
+  float: left;
+}
+
+/* Force the list to flow horizontally */
+/* line 108, ../../app/stylesheets/partials/_page.scss */
+.lavalamp li {
+  float: left;
+  list-style: none;
+}
+
+/* Represents the background of the highlighted menu-item. */
+/* line 113, ../../app/stylesheets/partials/_page.scss */
+.lavalamp li.back {
+  width: 9px;
+  height: 30px;
+  z-index: 8;
+  position: absolute;
+}
+
+/* line 119, ../../app/stylesheets/partials/_page.scss */
+.lavalamp li.back .left {
+  height: 30px;
+  margin-right: 9px;
+  border-bottom: 5px solid #b8da3e;
+  z-index: 8;
+  position: absolute;
+}
+
+/* Styles for each menu-item. */
+/* line 127, ../../app/stylesheets/partials/_page.scss */
+.lavalamp li a {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  font: bold 13px helvetica;
+  color: #ccc;
+  outline: none;
+  text-align: center;
+  height: 30px;
+  top: 7px;
+  z-index: 10;
+  letter-spacing: 1px;
+  float: left;
+  display: block;
+  margin: auto 10px;
 }
 
 @media print {

@@ -1,4 +1,5 @@
 @import "compass/css3";
+//@import "compass/layout/grid-background"
 
 //-----------------------------------------------
 // The following html5-boilerplate styles should
@@ -7,8 +8,7 @@
 
 body, select, input, textarea {
   color: $font-color;
-  // Set your base font here, to apply evenly
-  // font-family: Georgia, serif;
+  font-family: $base-font-family;
 }
 
 //Headers (h1, h2, etc) have no default font-size or margin; define those yourself
@@ -50,8 +50,93 @@ body {}
 
 #container {}
 
-header {}
+header {
+    @include linear-gradient(color-stops(#333333, #4a4949));
+    height:40px;
+    padding:10px;
+    color:#fff;
+}
 
-#main {}
+#main {
+    background: url(/images/noize.png);
+    @include stretch(61px, 0, 51px, 0);
+}
 
-footer {}
+footer {
+     @include linear-gradient(color-stops(#4a4949, #333333));
+    color: #fff;
+    padding:10px;
+}
+
+/* Styles for the entire LavaLamp menu */
+
+#logo {
+    float: left;
+}
+
+#search_bar input {
+    //background:none;
+    width: 230px;
+    height: 20px;
+    //border: none;
+    padding: 0 5px 0 5px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #4a4949;
+    //outline: none;
+    @include border_radius(7px);
+}
+
+#search_bar {
+    margin: 7px 0 0 0;
+    float:right;
+    //background: transparent url(/images/search_bar.png) left top no-repeat;  
+    width: 250px;
+    height: 36px;  
+}
+
+.lavalamp {
+    position: relative;
+    width: 550px;
+    height: 29px; 
+    padding: 5px; 
+    margin: 0;
+    overflow: hidden;
+    float: left;
+}
+    /* Force the list to flow horizontally */
+    .lavalamp li {
+        float: left;
+        list-style: none;
+    }
+        /* Represents the background of the highlighted menu-item. */
+        .lavalamp li.back {
+            width: 9px; 
+            height: 30px;
+            z-index: 8;
+            position: absolute;
+        }
+            .lavalamp li.back .left {
+                height: 30px;
+                margin-right: 9px;
+                border-bottom: 5px solid #b8da3e;
+                z-index: 8;
+                                        position: absolute;
+            }
+        /* Styles for each menu-item. */
+        .lavalamp li a {
+            position: relative; overflow: hidden;
+            text-decoration: none;
+            //text-transform: uppercase;
+            font: bold 13px helvetica;
+            color: #ccc; 
+            outline: none;
+            text-align: center;
+            height: 30px; 
+            top: 7px;
+            z-index: 10; 
+            letter-spacing: 1px;
+            float: left; display: block;
+            margin: auto 10px;
+        }
+       
