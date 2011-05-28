@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+
   @authorized = false
   @auth_service = nil
   
@@ -9,9 +10,7 @@ class ApplicationController < ActionController::Base
     @authorized
   end
   
-  def client
-      
-  end
+
   
   def authorize
     

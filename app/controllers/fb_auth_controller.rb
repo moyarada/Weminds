@@ -7,6 +7,12 @@ class FbAuthController < ApplicationController
     
   end
   
+  def client
+      @fb_client ||= FBGraph::Client.new(:client_id => @@app_id,
+                                     :secret_id => @@app_secret , 
+                                     :token => session[:fb_token])
+  end
+  
   def start
     
     
@@ -22,7 +28,7 @@ class FbAuthController < ApplicationController
     
     redirect_to @fb_client.authorization.authorize_url(
       :redirect_uri => @@redirect_url , 
-      :scope => 'email,publish_stream,offline_access')
+      :scope => 'email,publish_stream,offline_access,user_checkins,user_location,user_status,read_friendlists,user_photos')
       
       
       
@@ -46,8 +52,22 @@ class FbAuthController < ApplicationController
     session[:fb_token] = uri_params['access_token']
     user_json = client.selection.me.info!.data
     
-    user = User.create({:name => user_json.name, :email => user_json.email, :fb_token => session[:fb_token],
-                        :})
+    user = User.create({:name => user_json.name, :email => user_json.email, 
+                        :fb_token => session[:fb_token],
+                        :facebook_id => user_json.id,
+                        :time_zone => user_json.timezone,
+                        :avatar => "#{user_json.link}/picture"
+                        })
+    if (user_json.id)                    
+      if (user.valid?)
+      
+      else
+      
+      end
+    else
+      
+    end  
+                          
     
     render :json => user_json
 =begin
