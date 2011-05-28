@@ -49,9 +49,12 @@ input:invalid, textarea:invalid {
 body {}
     
 h1 {
-    font-size:28px;
+    font-size:20px;
     text-align: center;
     font-family: Verdana;
+    color: #fff;
+    padding: 0px 0 5px 0;
+    margin: 0;
 }
 
 #container {}
@@ -69,7 +72,7 @@ header {
 }
 
 footer {
-     @include linear-gradient(color-stops(#4a4949, #333333));
+    @include linear-gradient(color-stops(#4a4949, #333333));
     color: #fff;
     padding:10px;
 }
@@ -180,6 +183,7 @@ footer {
     background-color: #c5c1b4;
     @include single-box-shadow;
     @include opacity(0.9);
+    text-align:center;
 }
 
 #slider {
@@ -188,9 +192,31 @@ footer {
     margin: 20px 20px 20px 0;
     @include single-box-shadow;
     @include opacity(0.9);
+    text-align: center;
 }
 
 .login_btn {
     padding: 5px 0 5px 0;
+}
+
+.fp_promo {
+    padding: 0px 0 0 0;
+    @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
+}
+
+.floating {
+    float:center;
+    @include single-text-shadow;
+}
+#about {
+    @include linear-gradient(color-stops(#ededed, #d4d4d4));
+    @include border-radius(15px);
+    text-align: left;
+    background-color: #fff;
+    padding: 10px;
+    margin: 35px 0 0 0;
+    color: #6a6969;
+    //@include box-shadow(rgba(#537cb8, 0.8) 0 0 25px, rgba(#5494f0, 0.2) 0 0 3px 1px inset);
+    @include single-box-shadow;
 }
 

@@ -9,4 +9,5 @@ class User
   field :avatar, :type => String
   field :time_zone, :type => String
   field :tw_access_token, :type => String
+  field :fb_access_token, :type => String
 end
