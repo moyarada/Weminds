@@ -23,6 +23,7 @@ gem 'json'
 gem 'stalker'
 gem 'god'
 gem 'beanstalk-client'
+gem 'json_pure'
 
 # Deploy with Capistrano
 gem 'capistrano'

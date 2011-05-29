@@ -187,6 +187,7 @@ DEPENDENCIES
   html5-boilerplate
   jquery-rails (>= 0.2.6)
   json
+  json_pure
   linkedin
   mongo
   mongo_ext
