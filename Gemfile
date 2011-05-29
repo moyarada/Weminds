@@ -7,7 +7,7 @@ gem 'SystemTimer', '>= 1.2.0'
 
 gem 'jquery-rails', '>= 0.2.6'
 gem 'mongo'
-gem 'bson'
+gem 'bson', '>=1.3.1'
 gem 'bson_ext'
 gem 'mongoid', ">= 2.0"
 gem 'mongo_ext'

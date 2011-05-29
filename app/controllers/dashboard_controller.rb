@@ -22,6 +22,8 @@ class DashboardController < ApplicationController
     
     if (question.valid?)
       #TODO run post tasks
+      
+      Stalker.enqueue("post_question", :question => question)
       @status = :ok;
       @msg = "Your question was successfuly posted!"
     else
