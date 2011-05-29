@@ -20,6 +20,9 @@ gem 'sinatra'
 gem 'oauth'
 gem 'json'
 
+gem 'stalker'
+gem 'god'
+
 # Deploy with Capistrano
 gem 'capistrano'
 

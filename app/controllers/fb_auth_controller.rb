@@ -53,7 +53,7 @@ class FbAuthController < ApplicationController
     user_json = client.selection.me.info!.data
                         
     if (user_json.id) 
-      user = User.where("facebook_id" => user_json.id, )                
+      user = User.where("facebook_id" => user_json.id)                
       if (user.length > 0)
         user.update_attributes(:fb_token => session[:fb_token]);
         redirect_to root_path # authorized
