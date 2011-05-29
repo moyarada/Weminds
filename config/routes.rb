@@ -5,6 +5,8 @@ Weminds::Application.routes.draw do
          get :index
          get :show
          get :logout
+         post :ask
+         get :myquestions
        end
    end
    

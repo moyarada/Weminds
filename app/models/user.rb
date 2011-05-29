@@ -10,4 +10,9 @@ class User
   field :time_zone, :type => String
   field :tw_access_token, :type => String
   field :fb_access_token, :type => String
+  field :created_on, :type => DateTime
+  field :updated_on, :type => DateTime
+  
+  has_many :questions
+  has_many :answers
 end

@@ -918,12 +918,12 @@ a.tw_btn {
   margin: 5px 20px 0 0;
 }
 
-/* line 258, ../../app/stylesheets/partials/_page.scss */
-a.tw_btn:hover {
-  background-position: -281px -54px;
+/* line 260, ../../app/stylesheets/partials/_page.scss */
+a.tdown {
+  background-position: 1px -54px;
 }
 
-/* line 262, ../../app/stylesheets/partials/_page.scss */
+/* line 264, ../../app/stylesheets/partials/_page.scss */
 a.fb_btn {
   float: right;
   display: block;
@@ -935,9 +935,9 @@ a.fb_btn {
   margin: 5px 20px 0 0;
 }
 
-/* line 273, ../../app/stylesheets/partials/_page.scss */
-a.fb_btn:hover {
-  background-position: -281px 0px;
+/* line 277, ../../app/stylesheets/partials/_page.scss */
+a.fdown {
+  background-position: 1px 0px;
 }
 
 @media print {

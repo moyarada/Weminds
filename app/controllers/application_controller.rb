@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
+  
+  
   @authorized = false
   @auth_service = nil
   
@@ -28,7 +29,15 @@ class ApplicationController < ActionController::Base
       @authorized = true
       @auth_service = "li_token"
     end   
-    puts @authorized
+    if (@authorized === true)
+      @users = User.where(@auth_service => session[@auth_service])
+    
+      if (@users.length > 0)
+        @user_data = @users[0]
+      else
+        puts "User can't be found"
+      end    
+    end
   end  
   
 
