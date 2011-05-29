@@ -220,3 +220,59 @@ footer {
     @include single-box-shadow;
 }
 
+.qa {
+    width: 90%;
+    height: 55px;
+    @include border_radius(7px);
+    padding: 4px 15px 4px 15px; 
+    font-size: 22px;
+}
+
+a.send_btn  {
+    float:right;
+    display: block;
+    width: 198px;
+    height: 54px;
+    background: transparent url(/images/btn_sprite.png) -53px -236px no-repeat;
+    margin: 0 27px 0 0;
+    padding: 17px 0 0 0 ;
+    font-size: 20px;   
+    text-decoration:none; 
+}
+
+a.send_btn:hover {
+    background-position: -579px -236px;
+}
+
+a.tw_btn {
+    float:right;
+    display: block;
+    width: 118px;
+    height: 46px;
+    background: transparent url(/images/soc_button.png) -140px -54px no-repeat;
+    font-size: 20px;   
+    text-decoration:none;
+    margin: 5px 20px 0 0;
+}
+
+a.tw_btn:hover {
+    background-position: -281px -54px;
+}
+
+a.fb_btn {
+    float:right;
+    display: block;
+    width: 118px;
+    height: 46px;
+    background: transparent url(/images/soc_button.png) -140px 0 no-repeat;
+    font-size: 20px;   
+    text-decoration:none;
+     margin: 5px 20px 0 0;
+}
+
+a.fb_btn:hover {
+    background-position: -281px -0px;
+}
+
+
+

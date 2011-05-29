@@ -55,7 +55,7 @@ class TwitterAuthController < ApplicationController
     if (user_info['id_str']) 
       user = User.where("twitter_id" => user_info['id_str'])
       if (user.length > 0) 
-        puts user[0].tw_access_token
+        #puts user[0].tw_access_token
         if (user[0].tw_access_token && (user[0].tw_access_token <=> access_token)) # if access token was changed - update it  
           user.update_attributes(:tw_access_token => access_token);
           if (!user.valid?)

@@ -51,45 +51,34 @@ class FbAuthController < ApplicationController
     uri_params = Hash[*response.split("&").map {|part| part.split("=") }.flatten]
     session[:fb_token] = uri_params['access_token']
     user_json = client.selection.me.info!.data
-    
-    user = User.create({:name => user_json.name, :email => user_json.email, 
-                        :fb_token => session[:fb_token],
-                        :facebook_id => user_json.id,
-                        :time_zone => user_json.timezone,
-                        :avatar => "#{user_json.link}/picture"
-                        })
-    if (user_json.id)                    
-      if (user.valid?)
-      
+                        
+    if (user_json.id) 
+      user = User.where("facebook_id" => user_json.id)                   
+      if (user.length > 0)
+        if (user[0].fb_access_token && (user[0].fb_access_token <=> uri_params['access_token'])) # if access token was changed - update it  
+          user.update_attributes(:fb_token => uri_params['access_token']);
+          if (!user.valid?)
+            puts user.errors
+          end    
+        end
+        redirect_to root_path # authorized
       else
-      
-      end
+        create = User.create({:name => user_json.name, :email => user_json.email, 
+                            :fb_token => session[:fb_token],
+                            :facebook_id => user_json.id,
+                            :time_zone => user_json.timezone,
+                            :avatar => "#{user_json.link}/picture"
+                            })
+        if (create.valid?)
+          redirect_to root_path
+        else
+          puts create.errors  
+        end                    
+      end    
     else
-      
-    end  
-                          
-    
-    render :json => user_json
-=begin
-    if (request.port == 80)
-      @@redirect_url = "http://#{request.host}/fb_auth/callback"
-    else
-      @@redirect_url = "http://#{request.host}:#{request.port}/fb_auth/callback"
-    end
-
-     @fb_client ||= FBGraph::Client.new(:client_id => @@app_id,
-                                        :secret_id => @@app_secret)
-    
-    session[:fb_token] = params["code"]
-                                     
-    access_token = @fb_client.authorization.process_callback(params["code"], :redirect_uri => @@redirect_url)
-    session[:fb_access_token] = access_token
-    user_json = client.selection.me.info!.data
-    # in reality you would at this point store the access_token.token value as well as 
-    # any user info you wanted
-    render :json => user_json
-=end
-    
+       puts user_info.inspect
+       puts "No user id found"
+    end      
   end   
   
   def oclient

@@ -874,6 +874,72 @@ footer {
   box-shadow: 0px 0px 5px #333333;
 }
 
+/* line 223, ../../app/stylesheets/partials/_page.scss */
+.qa {
+  width: 90%;
+  height: 55px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+  padding: 4px 15px 4px 15px;
+  font-size: 22px;
+}
+
+/* line 231, ../../app/stylesheets/partials/_page.scss */
+a.send_btn {
+  float: right;
+  display: block;
+  width: 198px;
+  height: 54px;
+  background: transparent url(/images/btn_sprite.png) -53px -236px no-repeat;
+  margin: 0 27px 0 0;
+  padding: 17px 0 0 0;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* line 243, ../../app/stylesheets/partials/_page.scss */
+a.send_btn:hover {
+  background-position: -579px -236px;
+}
+
+/* line 247, ../../app/stylesheets/partials/_page.scss */
+a.tw_btn {
+  float: right;
+  display: block;
+  width: 118px;
+  height: 46px;
+  background: transparent url(/images/soc_button.png) -140px -54px no-repeat;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 5px 20px 0 0;
+}
+
+/* line 258, ../../app/stylesheets/partials/_page.scss */
+a.tw_btn:hover {
+  background-position: -281px -54px;
+}
+
+/* line 262, ../../app/stylesheets/partials/_page.scss */
+a.fb_btn {
+  float: right;
+  display: block;
+  width: 118px;
+  height: 46px;
+  background: transparent url(/images/soc_button.png) -140px 0 no-repeat;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 5px 20px 0 0;
+}
+
+/* line 273, ../../app/stylesheets/partials/_page.scss */
+a.fb_btn:hover {
+  background-position: -281px 0px;
+}
+
 @media print {
   /* line 24, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_media.scss */
   * {
