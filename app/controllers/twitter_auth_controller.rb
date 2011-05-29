@@ -55,22 +55,21 @@ class TwitterAuthController < ApplicationController
     if (user_info['id_str']) 
       user = User.where("twitter_id" => user_info['id_str'])
       if (user.length > 0) 
+        puts "Found #{user.length} users with id = #{user_info['id_str']}"
         #puts user[0].tw_access_token
-        if (user[0].tw_access_token && (user[0].tw_access_token <=> access_token)) # if access token was changed - update it  
-          user.update_attributes(:tw_access_token => access_token);
-          if (!user.valid?)
-            puts user.errors
-          end    
-        end   
+        user[0].update_attributes(:tw_token => session[:tw_token], :tw_access_token => access_token)
+        
+        puts "Authorized with Twitter - redirect to root"
         redirect_to root_path # authorized  
       else
         create = User.create({
-          :twitter_id => user_info['id_str'], :name => user_info['name'], 
-          :avatar => user_info['profile_image_url'],
-          :email => nil, :time_zone => user_info['time_zone'],
-          :tw_access_token => access_token
-          })
+                  :twitter_id => user_info['id_str'], :name => user_info['name'], 
+                  :avatar => user_info['profile_image_url'],
+                  :email => nil, :time_zone => user_info['time_zone'],
+                  :tw_access_token => access_token, :tw_token => session[:tw_token]
+                  })
         if (create.valid?)
+          puts "Users created - Redirect to ROOT"
           redirect_to :root
         else
           puts create.errors  

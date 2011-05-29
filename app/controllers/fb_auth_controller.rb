@@ -53,14 +53,9 @@ class FbAuthController < ApplicationController
     user_json = client.selection.me.info!.data
                         
     if (user_json.id) 
-      user = User.where("facebook_id" => user_json.id)                   
+      user = User.where("facebook_id" => user_json.id, )                
       if (user.length > 0)
-        if (user[0].fb_access_token && (user[0].fb_access_token <=> uri_params['access_token'])) # if access token was changed - update it  
-          user.update_attributes(:fb_token => uri_params['access_token']);
-          if (!user.valid?)
-            puts user.errors
-          end    
-        end
+        user.update_attributes(:fb_token => session[:fb_token]);
         redirect_to root_path # authorized
       else
         create = User.create({:name => user_json.name, :email => user_json.email, 

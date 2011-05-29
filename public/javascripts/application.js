@@ -4,7 +4,34 @@ var post_on = {
 };
 var sendQuestion = function(question) {  
        console.log(question, post_on);
-   };
+       
+       var send = false;
+       for (var i in post_on){
+           console.log(i, post_on[i]);
+           if (post_on[i] === true) {
+               send = true;
+           } 
+       }
+       
+       if (send === false) {
+           alert('Please select at least one network to post to before submitting your question');
+           return;
+       }
+       
+       $.ajax({
+         url: '/dashboard/ask.json',
+         data: {question: question,
+                post_on: post_on},
+         type: "POST",
+         success: function(data) {
+           //$('.result').html(data);
+           console.log(data);
+         },
+         error: function(jqXHR, textStatus, error) {
+             console.log(error);
+         }
+       });
+};
    
 $(document).ready(function(){
     
