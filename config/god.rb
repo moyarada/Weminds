@@ -2,8 +2,8 @@ RAILS_ROOT = File.expand_path("../..", __FILE__)
 
 God.watch do |w|
   w.name = "anycity-worker"
-  w.interval = 3.seconds
-  w.env = {"RAILS_ENV" => "production"}
+  w.interval = 5.seconds
+  w.env = {"RAILS_ENV" => "development"}
   w.start = "/usr/bin/stalk #{RAILS_ROOT}/config/jobs.rb"
   w.log = "#{RAILS_ROOT}/log/stalker.log"
 

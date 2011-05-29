@@ -940,6 +940,12 @@ a.fdown {
   background-position: 1px 0px;
 }
 
+/* line 281, ../../app/stylesheets/partials/_page.scss */
+#services {
+  text-align: left important;
+  width: 150px;
+}
+
 @media print {
   /* line 24, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_media.scss */
   * {

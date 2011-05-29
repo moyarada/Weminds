@@ -2,7 +2,7 @@ require 'rubygems'
 
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.beta1'
+gem 'rails', '3.0.3'
 gem 'SystemTimer', '>= 1.2.0'
 
 gem 'jquery-rails', '>= 0.2.6'
@@ -15,10 +15,12 @@ gem 'mongo_ext'
 # Facebook 
 gem 'fbgraph'
 gem 'linkedin'
-gem 'twitter_oauth'
+gem 'twitter'
 gem 'sinatra'
 gem 'oauth'
 gem 'json'
+
+
 
 gem 'stalker'
 gem 'god'

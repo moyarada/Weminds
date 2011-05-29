@@ -10,7 +10,8 @@ class TwitterAuthController < ApplicationController
     # consumer_key and consumer_secret are from Twitter.
     # You'll get them on your application details page.
     @oauth = OAuth::Consumer.new(@@api_key, @@api_secret,
-                                 {:site => 'http://twitter.com/',
+                                 {:site => 'http://api.twitter.com/',
+                                  :scheme => :header, 
                                  	:request_token_path => '/oauth/request_token',
                                  	:access_token_path => '/oauth/access_token',
                                  	:authorize_path => '/oauth/authorize' })
@@ -34,21 +35,27 @@ class TwitterAuthController < ApplicationController
 
   def callback
     oauth = OAuth::Consumer.new(@@api_key, @@api_secret,
-                                 { :site => 'http://twitter.com/',
-                                 		:request_token_path => '/oauth/request_token',
-                                 		:access_token_path => '/oauth/access_token',
-                                 		:authorize_path => '/oauth/authorize' })
+                                 { :site => 'http://api.twitter.com',
+                                   :scheme => :header,
+                                   :request_endpoint => 'http://api.twitter.com', 
+                                   :sign_in => true})
                                  		
-    request_token = OAuth::RequestToken.new(oauth, session[:tw_token],
-                                            session[:tw_secret])
+    request_token = OAuth::RequestToken.new(oauth, session[:tw_token], session[:tw_secret])
                                             
     access_token = request_token.get_access_token(:auth_verifier => params[:oauth_verifier])
     
-      
+    
+    #token_hash = { :oauth_token => session[:tw_token],
+    #               :oauth_token_secret => session[:tw_secret],
+    #               :auth_verifier => params[:oauth_verifier]
+    #               }
+    
+    #access_token = OAuth::AccessToken.from_hash(oauth, token_hash )  
                                  
     # Get account details from Twitter
     response = oauth.request(:get, '/account/verify_credentials.json',
-                             access_token, { :scheme => :query_string })                          
+                             access_token, { :scheme => :query_string })    
+                                                   
     # Then do stuff with the details
     user_info = JSON.parse(response.body)
     
@@ -57,7 +64,7 @@ class TwitterAuthController < ApplicationController
       if (user.length > 0) 
         puts "Found #{user.length} users with id = #{user_info['id_str']}"
         #puts user[0].tw_access_token
-        user[0].update_attributes(:tw_token => session[:tw_token], :tw_access_token => access_token)
+        user[0].update_attributes(:tw_token => session[:tw_token], :tw_access_token => YAML::dump(access_token))
         
         puts "Authorized with Twitter - redirect to root"
         redirect_to root_path # authorized  
@@ -66,7 +73,7 @@ class TwitterAuthController < ApplicationController
                   :twitter_id => user_info['id_str'], :name => user_info['name'], 
                   :avatar => user_info['profile_image_url'],
                   :email => nil, :time_zone => user_info['time_zone'],
-                  :tw_access_token => access_token, :tw_token => session[:tw_token]
+                  :tw_access_token => YAML::dump(access_token), :tw_token => session[:tw_token]
                   })
         if (create.valid?)
           puts "Users created - Redirect to ROOT"
