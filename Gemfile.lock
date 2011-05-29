@@ -176,6 +176,7 @@ PLATFORMS
 
 DEPENDENCIES
   SystemTimer (>= 1.2.0)
+  beanstalk-client
   bson
   bson_ext
   capistrano
