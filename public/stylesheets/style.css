@@ -946,6 +946,11 @@ a.fdown {
   width: 150px;
 }
 
+/* line 287, ../../app/stylesheets/partials/_page.scss */
+#like_button {
+  padding: 10px 0 0 0;
+}
+
 @media print {
   /* line 24, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_media.scss */
   * {
