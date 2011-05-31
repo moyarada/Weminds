@@ -288,5 +288,9 @@ a.fdown {
     padding: 10px 0 0 0;
 }
 
+p.logo {
+    font-size: 30px;
+    @include single-text-shadow;
+}
 
 

@@ -1,17 +1,18 @@
 #logo
-  %img{'src' => '/images/logo.png'}
+  %p.logo StatusBall
 %ul.lavalamp
   %li
     %a{'href' => '#'} Home
   %li
-    %a{'href' => '#'} QFeed
+    %a{'href' => '#'} Feed
   %li    
     %a{'href' => '#'} About
 
-#user_menu
-  %a{'href' => '/dashboard/profile'} Profile
-  %a{'href' => '/dashboard/services'} Services
-  %a{'href' => '/dashboard/logout'} Logout
-  
-#search_bar
-  %input{'type' => 'text'}
+- if (@authorized)
+  #user_menu
+    %a{'href' => 'javascript:void(0)'} Profile
+    %a{'href' => 'javascript:void(0)'} Services
+    %a{'href' => 'javascript:void(0)'} Logout
+ 
+-#search_bar
+  -#%input{'type' => 'text'}

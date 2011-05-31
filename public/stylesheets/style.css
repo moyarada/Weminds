@@ -951,6 +951,12 @@ a.fdown {
   padding: 10px 0 0 0;
 }
 
+/* line 291, ../../app/stylesheets/partials/_page.scss */
+p.logo {
+  font-size: 30px;
+  text-shadow: rgba(0, 0, 0, 0.8) 0px 1px 3px;
+}
+
 @media print {
   /* line 24, ../../../../../../../opt/local/lib/ruby/gems/1.8/gems/html5-boilerplate-0.3.3/stylesheets/html5-boilerplate/_media.scss */
   * {
