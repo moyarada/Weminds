@@ -1,4 +1,4 @@
-set :application, "Weminds"
+set :application, "StatusBall"
 set :repository,  "git@github.com:moyarada/Weminds.git"
 
 set :user, "weminds"
@@ -13,8 +13,8 @@ set :stack, :passenger_nginx
 ssh_options[:forward_agent] = true
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "weminds.com"                          # Your HTTP server, Apache/etc
-role :app, "weminds.com"                          # This may be the same as your `Web` server
+role :web, "statusball.com"                          # Your HTTP server, Apache/etc
+role :app, "statusball.com"                          # This may be the same as your `Web` server
 
 
 
